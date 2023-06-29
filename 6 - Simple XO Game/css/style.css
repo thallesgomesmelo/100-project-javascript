@@ -1,0 +1,115 @@
+body {
+  background-color: ghostwhite;
+  color: dimgray;
+  font-family: serif;
+  text-align: center;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+#container {
+  margin: 5% auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+
+  padding: 0;
+  border: 1px solid gray;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  display: inline-block;
+}
+
+span {
+  position: absolute;
+
+  width: 75px;
+  height: 75px;
+
+  padding: 0;
+  margin: 5px;
+  margin-left: -35px;
+
+  font-size: 75px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.top {
+  border-top: none;
+}
+
+.bottom {
+  border-bottom: none;
+}
+
+.left {
+  border-left: none;
+}
+
+.right {
+  border-right: none;
+}
+
+.alert {
+  height: 75px;
+  width: 125px;
+
+  display: inline-block;
+
+  background: ghostwhite;
+
+  position: relative;
+  top: 0;
+  bottom: 50px;
+  z-index: 10;
+
+  margin-top: -50%;
+  border-radius: 20px;
+  box-shadow: 0 0 75px 2px dimgray;
+  box-sizing: content-box;
+  padding: 30px;
+
+  animation: larger 0.5s;
+  animation-fill-mode: forwards;
+}
+
+button {
+  background: dimgray;
+  color: ghostwhite;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+}
+
+button:focus {
+  background: silver;
+}
+
+.activeBox {
+  background: silver;
+}
+
+@keyframes larger {
+  from {
+    height: 75px;
+    width: 125px;
+  }
+  to {
+    height: 100px;
+    width: 250px;
+  }
+}
