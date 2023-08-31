@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(#1c1917 50%, #ffb92a 50%);
+}
+
+.container {
+  width: 90vw;
+  max-width: 512px;
+
+  padding: 35px 20px 38px;
+  background-color: #1e293b;
+  border-radius: 10px;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.search-box {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 15px;
+}
+
+.search-box input {
+  font-size: 15px;
+  padding: 6px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+}
+
+.search-box button {
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #ffb92a;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+img {
+  display: block;
+  width: 35%;
+  margin: 28px auto 22px;
+  border-radius: 6px;
+}
+
+.details {
+  background-color: #ffb92a;
+  position: relative;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.details h2 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.details h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#show-recipe {
+  font-size: 15px;
+  font-weight: 500;
+
+  padding: 8px 12px;
+  background-color: #ffb92a;
+  border: none;
+  border-radius: 6px;
+
+  position: relative;
+  top: 24px;
+  left: 76%;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#recipe {
+  min-height: 100%;
+  width: 100%;
+  background-color: #1e293b;
+  border-radius: 10px;
+  display: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#recipe pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 40px 24px 24px;
+  font-size: 14px;
+  color: #fff;
+}
+
+#hide-recipe {
+  width: 28px;
+  height: 28px;
+
+  font-size: 15px;
+  background-color: #ffb92a;
+  border: none;
+  border-radius: 6px;
+
+  position: relative;
+  top: 18px;
+  left: 91%;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#show-recipe:hover,
+#hide-recipe:hover,
+.search-box button:hover {
+  background-color: #e69b00;
+}
+
+ul {
+  font-size: 15px;
+  color: #ccc;
+  text-transform: capitalize;
+
+  padding: 16px 0 0 18px;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12px 12px;
+
+  position: relative;
+}
+
+#ingre-container h3 {
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    font-size: 14px;
+    padding: 35px 25px 28px;
+  }
+
+  #show-recipe {
+    left: 73%;
+  }
+}
