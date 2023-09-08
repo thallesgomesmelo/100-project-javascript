@@ -1,4 +1,18 @@
 const canvas = document.getElementById("game");
+
+const colors = [
+  "#333",
+  "#01d2fd",
+  "#ffc700",
+  "#fe9f12",
+  "#06d0c7",
+  "#FF00C7",
+  "#C7FF00",
+  "#FD0154",
+  "#3F00BD",
+  "#FBFAFD"
+];
+
 let ctx = canvas.getContext("2d"),
   ballRadius = 9,
   x = canvas.width / (Math.floor(Math.random() * Math.random() * 10) + 3),
@@ -24,13 +38,17 @@ let rowCount = 5,
 
 // Bricks array
 let bricks = [];
+const colorBricks = [];
 
 for (let c = 0; c < columnCount; c++) {
   bricks[c] = [];
+  colorBricks[c] = [];
 
   for (let r = 0; r < rowCount; r++) {
     // Set position of bricks
     bricks[c][r] = { x: 0, y: 0, status: 1 };
+    // Set color of brincks
+    colorBricks[c][r] = parseInt(Math.random() * colors.length);
   }
 }
 
@@ -65,7 +83,7 @@ function drawPaddle() {
 function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-  ctx.fillStyle = "#333";
+  ctx.fillStyle = "#fe9f12";
   ctx.fill();
   ctx.closePath();
 }
@@ -83,7 +101,7 @@ function drawBricks() {
 
         ctx.beginPath();
         ctx.roundRect(brickX, brickY, brickWidth, brickHeight, 30);
-        ctx.fillStyle = "#333";
+        ctx.fillStyle = colors[colorBricks[c][r]];
         ctx.fill();
         ctx.closePath();
       }
