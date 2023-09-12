@@ -110,3 +110,17 @@ function appendMessage(sender, message) {
   chatLog.appendChild(chatElement);
   chatLog.scrollTo = chatLog.scrollHeight;
 }
+
+// TODO:
+/**
+ * - Melhora documentação do código.
+ * - Refatorar as funções.
+ * - Adicionar favicon
+ * - Fazer documentação do REAME.md
+ */
+
+// FIXME:
+/**
+ * - Adicionar bloqueio no campo pergunta quando estiver esperando resporta do fetch
+ * - Melhorar adaptação do texto quando mensagens for muito grande.
+ */
